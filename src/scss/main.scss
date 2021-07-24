@@ -1,0 +1,28 @@
+@import "custom";
+@import "~bootstrap/scss/bootstrap";
+
+#toc_container {
+  font-size: 95%;
+  margin-bottom: 1em;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.toc_title {
+  font-weight: 700;
+  text-align: center;
+}
+
+.toc_list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#toc_container li, #toc_container ul, #toc_container ul li{
+  list-style: outside none none !important;
+}

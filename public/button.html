@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Exercícios de Javascript - Botões</title>
+
+    <link rel="stylesheet" href="bundle.css" />
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="alert" role="alert">
+        <h4 class="alert-heading">Sessão 01: Mudar texto de um elemento</h4>
+        <p>
+          Temos nessa sessão um botão e precisamos mudar o texto quando clicarmos no botão.
+
+          Você pode se basear nessa estrutura para adicionar um evento a um elemento.
+        </p>
+
+        <pre>
+          [elemento].addEventListener(["nomeDoEvento"], [função]);
+
+          // Siga esse exemplo para essa sessão:
+
+          document.getElementById("idDoBotão").addEventListener("click", function () {
+            document.getElementById("idDoTexto").innerText = "Novo texto";
+          });
+        </pre>
+
+        <hr>
+
+        <button id="buttonSection01" type="button" class="btn btn-primary">Clique em mim</button>
+        <p id="textSection01" class="mb-0">Mude meu texto</p>
+      </div>
+
+      <hr style="border: 1px solid #000" />
+
+      <div class="alert" role="alert">
+        <h4 class="alert-heading">Sessão 02: Escondendo elementos</h4>
+        <p>
+          Nessa sessão vamos trabalhar também com CSS, precisamos esconder um elemento com base no clique do botão.
+
+          Você pode se basear nessa estrutura para adicionar um evento a um elemento.
+        </p>
+
+        <pre>
+          [elemento].addEventListener(["nomeDoEvento"], [função]);
+
+          // Siga esse exemplo para essa sessão:
+
+          document.getElementById("idDoBotão").addEventListener("click", function () {
+            document.getElementById("idDoTexto").className = "escondido"
+          });
+
+          // Adicione no seu css essa classe
+
+          .escondido {
+            display: none;
+          }
+
+        </pre>
+
+        <hr>
+
+        <button id="buttonSection02" type="button" class="btn btn-primary">Clique em mim</button>
+        <p id="textSection02" class="mb-0">Me esconda</p>
+      </div>
+
+      <hr style="border: 1px solid #000" />
+
+      <div class="alert" role="alert">
+        <h4 class="alert-heading">Sessão 03: Escondendo elementos</h4>
+        <p>
+          Na sessão passada vimos que podemos modificar classes utilizando o atributo <code>className</code>, porém também podemos utilizar o <code>classList</code> para alternar se queremos adicionar e remover uma classe por exemplo, utilizando o <code>.toggle()</code>.
+
+          Você pode se basear nessa estrutura para adicionar um evento a um elemento.
+        </p>
+
+        <pre>
+          [elemento].addEventListener(["nomeDoEvento"], [função]);
+
+          // Siga esse exemplo para essa sessão:
+
+          document.getElementById("idDoBotão").addEventListener("click", function () {
+            document.getElementById("idDoTexto").classList.toggle("escondido");
+          });
+
+          // Adicione no seu css essa classe
+
+          .escondido {
+            display: none;
+          }
+
+        </pre>
+
+        <hr>
+
+        <button id="buttonSection03" type="button" class="btn btn-primary">Clique em mim</button>
+        <p id="textSection03" class="mb-0">Me esconda</p>
+      </div>
+
+      <hr style="border: 1px solid #000" />
+
+      <div class="alert" role="alert">
+        <h4 class="alert-heading">Sessão 04: Utilizando outros eventos</h4>
+        <p>
+          Não existe somente o evento de click, também temos o evento de <code>mouseover</code> para quando o mouse passa por cima do elemento, e <code>mouseleave</code> quando o mouse sai do elemento. Sabendo disso, e sabendo que você pode adicionar qualquer número de eventos a um mesmo elemento eu quero que você adicione e remova a classe <code>escondido</code> do texto.
+
+          Você pode se basear nessa estrutura para adicionar um evento a um elemento.
+        </p>
+
+        <pre>
+          [elemento].addEventListener(["nomeDoEvento"], [função]);
+
+          // Siga esse exemplo para essa sessão:
+
+          document.getElementById("idDoBotão").addEventListener("mouseover", function () {
+            document.getElementById("idDoTexto").className = "escondido";
+          });
+
+          document.getElementById("idDoBotão").addEventListener("mouseleave", function () {
+            document.getElementById("idDoTexto").className = "";
+          });
+
+          // Adicione no seu css essa classe caso não tenha ainda.
+
+          .escondido {
+            display: none;
+          }
+
+        </pre>
+
+        <hr>
+
+        <button id="buttonSection04" type="button" class="btn btn-primary">Clique em mim</button>
+        <p id="textSection04" class="mb-0">Me esconda</p>
+      </div>
+
+      <hr style="border: 1px solid #000" />
+    </div>
+
+
+
+    <!-- Write your HTML above this line -->
+    <script defer src="bundle.js"></script>
+  </body>
+</html>

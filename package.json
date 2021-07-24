@@ -7,7 +7,12 @@
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.js",
     "start": "cross-env NODE_ENV=development webpack-dev-server"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@popperjs/core": "^2.9.2",
+    "bootstrap": "^5.0.2",
+    "jquery": "^3.6.0",
+    "popper.js": "^1.16.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.10.3",
     "@babel/preset-env": "^7.10.3",
